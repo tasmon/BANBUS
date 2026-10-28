@@ -5,10 +5,15 @@ A 3D bus driving simulation set in Bangladesh. Runs in desktop and mobile browse
 **Developer:** Tasmon Islam
 
 ## Features
-- **3D driving** with a chase camera and a cockpit view (`C`), built with Three.js
+- **Mobile-bus-game style 3D driving:** orange City Coach with white livery, palm-lined streets, brick sidewalks, blue fuel stations, clouds and sea, built with Three.js
+- **Console-style HUD:** circular minimap, clock, fuel and coin pills, speedometer with speed-limit sign, steering arrows, brake and accelerator pedals, and round buttons for door, engine key, lights, hazards, seatbelt, gear (D/R), camera and radio
+- **Wide chase camera** that keeps the bus small on screen, plus far and cockpit views (`V`, `C`)
+- **Long roads:** junctions are about 800 units apart (twice the earlier spacing), so you can drive for a while between turns
+- **Modern graphics:** real-time shadows on desktop, a sky dome with sun and soft clouds, glossy bus paint, detailed glass facades with lit windows at night, rooftop water tanks, brick sidewalks with curbs, street lamps, and traffic that spawns around you (low-detail mode on phones; add `#hq` to the URL to force full quality)
+- **Door gameplay:** open the door at a stop to board or drop passengers, and close it before driving (fine if not)
 - **6 cities:** Sylhet, Rajshahi, Cox's Bazar, Khulna, Chattogram and Dhaka. Each has its own stops (English and Bangla), traffic density, weather, fare level, skyline and water (sea, river or port). Bigger cities unlock as your career earnings grow
 - **Realistic economy in taka (৳):** diesel at ৳105 per litre, distance-based fares (৳20–70 per passenger), realistic fines, and repairs at fuel stations
-- **4 bus models:** Local Bus, Express AC, Mini Bus, Double Decker
+- **4 bus models:** City Coach, Express AC, Mini Bus, Double Decker
 - **Bangladesh details:** left-hand traffic, rickshaws, CNG autos, trucks, mosques, bazaars, zebra crossings, traffic police and patrol cars
 - **Weather and day/night:** clear, monsoon rain, fog or smog, with headlights at night
 - **Audio:** engine, horn, crash, cash, rain and ambient city sounds (no asset files)
@@ -21,7 +26,11 @@ A 3D bus driving simulation set in Bangladesh. Runs in desktop and mobile browse
 | Brake / reverse | `↓` / `S` / `Space` | ■ |
 | Steer | `←` `→` / `A` `D` | ◀ ▶ |
 | Horn | `H` | 📣 |
-| Camera / Map / Pause | `C` / `M` / `P` | 🎥 / 🗺 / ⏸ |
+| Gear D/R | `R` | 🕹 button |
+| Door / Lights / Engine key | `E` / `L` / `K` | 🚪 / 💡 / 🔑 |
+| Cockpit / Camera distance | `C` / `V` | 🎥 / 🔄 |
+| Hazards / Seatbelt / Find fuel | `Z` / `B` / `F` | ⚠ / 💺 / ⛽ |
+| Map / Pause | `M` / `P` | 🗺 / ⏸ |
 
 ## Economy and rules
 | Item | Amount |
@@ -33,6 +42,8 @@ A 3D bus driving simulation set in Bangladesh. Runs in desktop and mobile browse
 | Speeding (50 km/h, 30 km/h downtown) | ৳800 / ৳1,200 |
 | Running a red light | ৳1,500 |
 | Collision | ৳2,000 |
+| No seatbelt near police | ৳500 |
+| Driving with the door open | ৳300 |
 | Driving off-road | ৳500 |
 | Hitting a pedestrian | ৳15,000 |
 | Towing (empty tank) | ৳3,000 |
