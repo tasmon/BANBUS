@@ -8,7 +8,9 @@ A 3D bus driving simulation set in Bangladesh. Runs in desktop and mobile browse
 - **Mobile-bus-game style 3D driving:** orange City Coach with white livery, palm-lined streets, brick sidewalks, blue fuel stations, clouds and sea, built with Three.js
 - **Console-style HUD:** circular minimap, clock, fuel and coin pills, speedometer with speed-limit sign, steering arrows, brake and accelerator pedals, and round buttons for door, engine key, lights, hazards, seatbelt, gear (D/R), camera and radio
 - **Wide chase camera** that keeps the bus small on screen, plus far and cockpit views (`V`, `C`)
-- **Long roads:** junctions are about 800 units apart (twice the earlier spacing), so you can drive for a while between turns
+- **Long, wide boulevards:** only 16–25 junctions per city, with about 3 km of straight six-lane road (three lanes each way, palm-lined median) between them. Traffic uses all lanes: fast cars on the inside, rickshaws and CNGs on the outer lanes
+- **Easy navigation:** a cyan route line and arrows on the road, turn hints ("Turn left in 240 m"), and the route drawn on the minimap
+- **Choose your bus colour:** ten presets plus a custom colour picker, with a live preview on the start screen (saved on your device)
 - **Modern graphics:** real-time shadows on desktop, a sky dome with sun and soft clouds, glossy bus paint, detailed glass facades with lit windows at night, rooftop water tanks, brick sidewalks with curbs, street lamps, and traffic that spawns around you (low-detail mode on phones; add `#hq` to the URL to force full quality)
 - **Door gameplay:** open the door at a stop to board or drop passengers, and close it before driving (fine if not)
 - **6 cities:** Sylhet, Rajshahi, Cox's Bazar, Khulna, Chattogram and Dhaka. Each has its own stops (English and Bangla), traffic density, weather, fare level, skyline and water (sea, river or port). Bigger cities unlock as your career earnings grow
@@ -39,7 +41,7 @@ A 3D bus driving simulation set in Bangladesh. Runs in desktop and mobile browse
 | Diesel | ৳105 per litre |
 | Repairs (at fuel stations) | ৳80 per health point |
 | Fare | ৳20–70 per passenger by distance, plus a time bonus; late trips earn half |
-| Speeding (50 km/h, 30 km/h downtown) | ৳800 / ৳1,200 |
+| Speeding (60 km/h, 40 km/h downtown) | ৳800 / ৳1,200 |
 | Running a red light | ৳1,500 |
 | Collision | ৳2,000 |
 | No seatbelt near police | ৳500 |
