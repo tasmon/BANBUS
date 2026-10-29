@@ -1,79 +1,56 @@
 # 🚌 BAN Bus Simulation
 
-A 3D bus driving simulation set in Bangladesh. Runs in desktop and mobile browsers and installs as a Progressive Web App (PWA).
+A 3D driving game set in Bangladesh. It runs in desktop and mobile browsers and installs as a Progressive Web App (PWA).
 
 **Developer:** Tasmon Islam
 
-## Features
-- **Mobile-bus-game style 3D driving:** orange City Coach with white livery, palm-lined streets, brick sidewalks, blue fuel stations, clouds and sea, built with Three.js
-- **Console-style HUD:** circular minimap, clock, fuel and coin pills, speedometer with speed-limit sign, steering arrows, brake and accelerator pedals, and round buttons for door, engine key, lights, hazards, seatbelt, gear (D/R), camera and radio
-- **Wide chase camera** that keeps the bus small on screen, plus far and cockpit views (`V`, `C`)
-- **Long, wide boulevards:** only 16–25 junctions per city, with about 3 km of straight six-lane road (three lanes each way, palm-lined median) between them. Traffic uses all lanes: fast cars on the inside, rickshaws and CNGs on the outer lanes
-- **Easy navigation:** a cyan route line and arrows on the road, turn hints ("Turn left in 240 m"), and the route drawn on the minimap
-- **Choose your bus colour:** ten presets plus a custom colour picker, with a live preview on the start screen (saved on your device)
-- **Modern graphics:** real-time shadows on desktop, a sky dome with sun and soft clouds, glossy bus paint, detailed glass facades with lit windows at night, rooftop water tanks, brick sidewalks with curbs, street lamps, and traffic that spawns around you (low-detail mode on phones; add `#hq` to the URL to force full quality)
-- **Door gameplay:** open the door at a stop to board or drop passengers, and close it before driving (fine if not)
-- **6 cities:** Sylhet, Rajshahi, Cox's Bazar, Khulna, Chattogram and Dhaka. Each has its own stops (English and Bangla), traffic density, weather, fare level, skyline and water (sea, river or port). Bigger cities unlock as your career earnings grow
-- **Realistic economy in taka (৳):** diesel at ৳105 per litre, distance-based fares (৳20–70 per passenger), realistic fines, and repairs at fuel stations
-- **4 bus models:** City Coach, Express AC, Mini Bus, Double Decker
-- **Bangladesh details:** left-hand traffic, rickshaws, CNG autos, trucks, mosques, bazaars, zebra crossings, traffic police and patrol cars
-- **Weather and day/night:** clear, monsoon rain, fog or smog, with headlights at night
-- **Audio:** engine, horn, crash, cash, rain and ambient city sounds (no asset files)
-- **Offline play** after the first load, installable PWA, best score saved per city
+## Game modes
+| Mode | What you do |
+|---|---|
+| **City · Passengers** | Pick up and drop off passengers at named stops. Earn fares, pay for diesel, avoid fines. |
+| **City · Free drive** | Explore the city with traffic and rules but no passengers or deadlines. |
+| **Highway** | Choose a destination city and drive the long intercity highway (distance estimated from real city locations). Speed cameras fine you; fuel stations are along the way. |
+| **Endless drive** | Infinite highway with growing traffic. Score from distance and near misses; no fines, no fuel worries. |
+| **Training** | Seven guided lessons: accelerate, steer, brake, drive through a ring, reverse, park, lights and horn. |
+| **Demolition derby** | Ram rival cars in an arena. Hits, drifting and honking to taunt build the **road-rage** meter; at 100 you get 8 seconds of ×3 points and extra damage. Clear waves for bonuses and repairs. |
+
+## Vehicles
+City Coach, Express AC, Mini Bus, Double Decker and the new **CNG Auto-rickshaw** (tiny, quick, 3 passengers, CNG at ৳43). Pick any colour in the Garage (presets or a custom colour picker).
 
 ## Controls
-| Action | Desktop | Mobile |
+| Action | Keyboard | Touch |
 |---|---|---|
-| Accelerate | `↑` / `W` | ▲ |
-| Brake / reverse | `↓` / `S` / `Space` | ■ |
-| Steer | `←` `→` / `A` `D` | ◀ ▶ |
+| Accelerate | `W` / `↑` | accelerator pedal |
+| Brake, then reverse | `S` / `↓` (Space = brake only) | brake pedal, or gear `R` + accelerator |
+| Steer | `A` `D` / `←` `→` | « » buttons |
 | Horn | `H` | 📣 |
-| Gear D/R | `R` | 🕹 button |
-| Door / Lights / Engine key | `E` / `L` / `K` | 🚪 / 💡 / 🔑 |
-| Cockpit / Camera distance | `C` / `V` | 🎥 / 🔄 |
-| Hazards / Seatbelt / Find fuel | `Z` / `B` / `F` | ⚠ / 💺 / ⛽ |
-| Map / Pause | `M` / `P` | 🗺 / ⏸ |
+| Lights / hazards / gear / engine key | `L` / `Z` / `R` / `K` | ⋯ menu |
+| Cockpit / camera distance | `C` / `V` | ⋯ menu |
+| Find fuel / map / pause | `F` / `M` / `P` | ⋯ menu, ⏸ |
 
-## Economy and rules
-| Item | Amount |
-|---|---|
-| Starting cash | ৳15,000 |
-| Diesel | ৳105 per litre |
-| Repairs (at fuel stations) | ৳80 per health point |
-| Fare | ৳20–70 per passenger by distance, plus a time bonus; late trips earn half |
-| Speeding (60 km/h, 40 km/h downtown) | ৳800 / ৳1,200 |
-| Running a red light | ৳1,500 |
-| Collision | ৳2,000 |
-| No seatbelt near police | ৳500 |
-| Driving with the door open | ৳300 |
-| Driving off-road | ৳500 |
-| Hitting a pedestrian | ৳15,000 |
-| Towing (empty tank) | ৳3,000 |
+## Interface
+The start screen shows only the six modes. Vehicle, colour and city are under **Garage**; the controls are under **How to play**. In game, the extra buttons are tucked behind ⋯, and the on-screen steering and pedals only appear on touch screens.
 
-Fines are **doubled** near traffic police (except towing). The game ends if the bus is wrecked or your balance falls below −৳5,000.
+## Camera
+A wide chase camera keeps the bus in view. It moves in when a building would block the view, trees are kept away from the road, and a faint silhouette of your vehicle shows through anything that gets in the way.
 
-## City unlocks
-Sylhet and Rajshahi are open from the start. Cox's Bazar and Khulna unlock at ৳3,000 career earnings, Chattogram at ৳8,000 and Dhaka at ৳15,000. Add `#unlock` to the URL to open all cities.
+## Map accuracy
+Each city's landmarks (Zindabazar, Farmgate, GEC Circle, Laboni Beach and so on) are placed at approximate real-world coordinates relative to each other, and rivers or the sea are on the correct side (for example the Padma south of Rajshahi, the Buriganga south of Dhaka and the Surma north of Sylhet). The coordinates were entered from memory, so treat them as approximate. The streets themselves are a simplified grid of wide boulevards, not a survey of the real road network. Importing OpenStreetMap data would be the way to get true street layouts.
+
+## Economy
+Diesel ৳105 per litre, CNG ৳43. Fares ৳20–150 per passenger by distance; intercity fares scale with kilometres. Fines (City and Highway): speeding ৳800–1,200 (60 km/h, 40 downtown, 80 on highways at cameras ৳1,500), red light ৳1,500, collision ৳2,000, off-road ৳500, pedestrian ৳15,000, towing ৳3,000. Fines are doubled near police. Fuel stations also repair the vehicle (৳80 per point).
 
 ## Run locally
 ```bash
 python3 -m http.server 8080
-# open http://localhost:8080
 ```
 Three.js (r128) loads from cdnjs on the first visit and is cached for offline play.
 
 ## Deploy on GitHub Pages
-1. Push these files to a repository.
-2. **Settings → Pages**, choose the `main` branch and `/ (root)`.
-3. Open the URL. Chrome/Edge show **Install**; on iOS use **Share → Add to Home Screen**.
+Push these files, enable **Settings → Pages** for the `main` branch, then open the URL. Chrome and Edge offer **Install**; on iOS use **Share → Add to Home Screen**. Add `#hq` to the URL to force full graphics on phones, or `#unlock` to open every city.
 
-## Structure
-```
-index.html            game, UI, audio and 3D renderer
-manifest.webmanifest  PWA manifest
-sw.js                 offline cache
-icon.svg, icon-*.png  app icons
-```
+## Files
+`index.html` (game), `manifest.webmanifest`, `sw.js`, `icon.svg`, `icon-192.png`, `icon-512.png`
 
 ## License
 MIT © Tasmon Islam
